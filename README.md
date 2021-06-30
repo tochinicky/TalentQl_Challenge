@@ -13,6 +13,23 @@ This project is the TalentQL code challenge written in vanilla Node.js without a
 
 * Node.js v12.x or higher
 * npm
+* An Authorization header needs to be passed to validate the  clientKey and 
+* clientsecret which you can set in the environment variables or can be defaulted, that
+* can be found in the config file. 
+* the Authorization header should have a value
+* (Bearer ********) with the encoded clientkey and clientsecret for a successful request.
+* To encode the clientid and clientsecret go to https://www.base64encode.org/ and 
+* parameters should be passed in the following sample data to get the encoded parameter:
+    sample data
+    {
+        clientid:clientsecret
+    }
+
+    sample header
+    {
+        Authorization: Bearer *********
+    }
+
 
 
 ### Getting Started <a name="getting_started"></a>
@@ -40,5 +57,17 @@ js
     "code": 400,
     "errors": {
         "expDate": "expiry date is invalid"
+    }
+}
+{
+    "message": "Invalid authorization token",
+    "bool": false,
+    "code": 401
+}
+{
+    "bool": false,
+    "code": 400,
+    "errors": {
+        "cvv": "cvv is invalid"
     }
 }
