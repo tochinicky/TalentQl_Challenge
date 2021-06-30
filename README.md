@@ -22,7 +22,7 @@ $ cd talentql
 $ npm start
 ```
 
-You should now be able to access the API via http://localhost:4500/validate
+You should now be able to access the API via http://localhost:4500/cards/validate
 
 #### Sample data <a name="sample_data"></a>
 js
